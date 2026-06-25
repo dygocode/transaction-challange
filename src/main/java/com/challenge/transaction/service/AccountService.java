@@ -24,7 +24,7 @@ public class AccountService {
 
     @Transactional
     public Account createAccount(String id, String owner, String createdAt, String status) {
-        log.debug("Criando conta {} para titular {}", id, owner);
+        log.info("Criando conta {} para titular {}", id, owner);
         Account account = new Account(id, owner, createdAt, status);
         return accountRepository.save(account);
     }
